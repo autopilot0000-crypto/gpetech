@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { CheckIcon } from './icons';
 import { useLanguage } from '../contexts/LanguageContext';
+import useFadeInAnimation from '../hooks/useFadeInAnimation';
 
 const translations = {
   bm: {
@@ -85,15 +86,17 @@ const translations = {
 const Features: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
+  const sectionRef = useRef<HTMLElement>(null);
+  const isVisible = useFadeInAnimation(sectionRef);
 
   return (
-    <section id="features" className="py-20 bg-pirus-dark">
+    <section ref={sectionRef} id="features" className={`py-20 bg-pirus-dark transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="text-center md:text-left">
+        <div className="grid md:grid-cols-1 gap-12 items-center">
+          <div className="text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white">{t.title}</h2>
-            <div className="w-24 h-1 my-4 bg-gradient-to-r from-pirus-blue to-pirus-pink rounded-full mx-auto md:mx-0"></div>
-            <ul className="space-y-4 mt-8">
+            <div className="w-24 h-1 my-4 bg-gradient-to-r from-pirus-blue to-pirus-pink rounded-full mx-auto"></div>
+            <ul className="space-y-4 mt-8 inline-block text-left">
               {t.features.map((feature, index) => (
                 <li key={index} className="flex items-center space-x-4">
                   <div className="flex-shrink-0 bg-pirus-blue/20 text-pirus-blue rounded-full p-2">
@@ -103,9 +106,6 @@ const Features: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
-          <div>
-             <img src="/images/features-diagram.png" alt="GPE Trade Robot Diagram" className="w-full h-auto rounded-lg shadow-lg"/>
           </div>
         </div>
       </div>

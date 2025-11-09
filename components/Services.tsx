@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { ExpertConsultationIcon, AdvancedTrainingIcon, CustomerSupportIcon } from './icons';
 import { useLanguage } from '../contexts/LanguageContext';
+import useFadeInAnimation from '../hooks/useFadeInAnimation';
 
 const translations = {
     bm: {
@@ -127,6 +128,8 @@ const translations = {
 const Services: React.FC = () => {
     const { language } = useLanguage();
     const t = translations[language];
+    const sectionRef = useRef<HTMLElement>(null);
+    const isVisible = useFadeInAnimation(sectionRef);
 
     const services = [
         {
@@ -147,7 +150,7 @@ const Services: React.FC = () => {
     ];
 
     return (
-        <section id="services" className="py-20 bg-pirus-dark/70">
+        <section ref={sectionRef} id="services" className={`py-20 bg-pirus-dark/70 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl sm:text-4xl font-bold text-white">{t.title}</h2>

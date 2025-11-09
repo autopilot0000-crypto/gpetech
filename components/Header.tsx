@@ -93,7 +93,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <img src="/images/gpe-logo.png" alt="GPE Logo" className="h-10 w-auto"/>
+            <span className="text-2xl font-bold text-white">GPE</span>
           </div>
           <div className="hidden md:flex items-center space-x-6">
             <nav className="hidden md:flex space-x-6">

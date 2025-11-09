@@ -169,3 +169,26 @@ export const ContactAdminIcon: React.FC = () => (
         <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.362 2.088a3 3 0 01.354-2.825A3 3 0 017.5 9.75h9a3 3 0 012.646 1.513 3 3 0 01.354 2.825M15 21H9a2.25 2.25 0 01-2.25-2.25v-1.5a2.25 2.25 0 012.25-2.25h6a2.25 2.25 0 012.25 2.25v1.5A2.25 2.25 0 0115 21z" />
     </svg>
 );
+
+export const QuoteIcon: React.FC<{ className?: string }> = ({ className }) => (
+    <svg className={`w-8 h-8 text-pirus-blue/30 mb-4 ${className || ''}`} fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10.43 2.93c.25-.34.1-.79-.32-1a1.2 1.2 0 00-1.21.32A8.6 8.6 0 005.15 6H8a1 1 0 011 1v4a1 1 0 01-1 1H3a1 1 0 01-1-1V7.5A4.5 4.5 0 016.5 3c1.3 0 2.5.58 3.93-.07zM16.5 3A4.5 4.5 0 0121 7.5V11a1 1 0 01-1 1h-5a1 1 0 01-1-1V7a1 1 0 011-1h2.85a8.6 8.6 0 00-3.75-3.75a1.2 1.2 0 00-1.21-.32c-.42.2-.57.65-.32 1 .4.54 1.22 1.24 2.43 2.12z" />
+    </svg>
+);
+
+const navIconProps = {
+    className: "w-6 h-6",
+    strokeWidth: 2
+};
+
+export const ChevronLeftIcon: React.FC = () => (
+    <svg {...navIconProps} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+    </svg>
+);
+
+export const ChevronRightIcon: React.FC = () => (
+    <svg {...navIconProps} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+    </svg>
+);

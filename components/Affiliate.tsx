@@ -186,7 +186,7 @@ const Affiliate: React.FC = () => {
           ))}
         </div>
         <div className="text-center mt-12">
-          <a href="https://t.me/mawarmelissabot" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-pirus-blue to-pirus-pink text-white font-bold py-3 px-10 rounded-md hover:opacity-90 transition-transform duration-300 transform hover:scale-105">
+          <a href="https://t.me/mimierobot" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-pirus-blue to-pirus-pink text-white font-bold py-3 px-10 rounded-md hover:opacity-90 transition-transform duration-300 transform hover:scale-105">
             {t.button}
           </a>
         </div>

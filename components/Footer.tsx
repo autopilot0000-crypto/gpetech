@@ -128,7 +128,7 @@ const Footer: React.FC = () => {
           </div>
           <div>
             <h4 className="font-bold text-lg text-white mb-4">{t.contactTitle}</h4>
-            <p>{t.contactAdmin} <a href="https://t.me/mawarmelissabot" target="_blank" rel="noopener noreferrer" className="text-pirus-blue hover:underline">@mawarmelissabot</a></p>
+            <p>{t.contactAdmin} <a href="https://t.me/mimierobot" target="_blank" rel="noopener noreferrer" className="text-pirus-blue hover:underline">@mimierobot</a></p>
           </div>
           <div className="bg-pirus-blue/10 border border-pirus-blue/20 p-4 rounded-md text-sm text-blue-200">
             <p><strong>{t.disclaimerTitle}</strong> {t.disclaimerText}</p>

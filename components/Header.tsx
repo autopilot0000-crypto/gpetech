@@ -93,7 +93,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <span className="text-2xl font-bold text-white">GPE</span>
+            <span className="text-2xl font-bold text-white">GPE-TECH</span>
           </div>
           <div className="hidden md:flex items-center space-x-6">
             <nav className="hidden md:flex space-x-6">
@@ -105,7 +105,7 @@ const Header: React.FC = () => {
             </nav>
             <div className="w-px h-6 bg-gray-700"></div>
             <LanguageSwitcher />
-            <a href="https://t.me/mawarmelissabot" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-pirus-blue to-pirus-pink text-white font-bold py-2 px-6 rounded-md hover:opacity-90 transition-all duration-300 transform hover:scale-105">
+            <a href="https://t.me/mimierobot" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-pirus-blue to-pirus-pink text-white font-bold py-2 px-6 rounded-md hover:opacity-90 transition-all duration-300 transform hover:scale-105">
               {t.contact}
             </a>
           </div>
@@ -131,7 +131,7 @@ const Header: React.FC = () => {
                 </a>
               ))}
             </nav>
-            <a href="https://t.me/mawarmelissabot" target="_blank" rel="noopener noreferrer" className="block mt-4 text-center bg-gradient-to-r from-pirus-blue to-pirus-pink text-white font-bold py-2 px-6 rounded-md hover:opacity-90 transition-all duration-300">
+            <a href="https://t.me/mimierobot" target="_blank" rel="noopener noreferrer" className="block mt-4 text-center bg-gradient-to-r from-pirus-blue to-pirus-pink text-white font-bold py-2 px-6 rounded-md hover:opacity-90 transition-all duration-300">
               {t.contact}
             </a>
           </div>
